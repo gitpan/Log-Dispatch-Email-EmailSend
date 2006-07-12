@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.44.
+signed via the Module::Signature module, version 0.54.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,17 +14,17 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 6f6f39de1a29300104e109f6e531747540e5cb43 Build.PL
-SHA1 d0da054b57c566d9282026142cd58fe7ca10771a Changes
+SHA1 62d626a6cc5ee8aff88a09d2a3209bb86778817b Build.PL
+SHA1 771d8b7f555f53fceb84228988bbd16bd161c7c7 Changes
 SHA1 f8ea19626db477bd2cfa9fb5a048b6ff76d32681 MANIFEST
-SHA1 9f4baa33ec728140e4c7c307aa590293aa888eb0 META.yml
-SHA1 a359d4072690a21ce63e4b393bdbc19d72b6be5a Makefile.PL
-SHA1 2c427871b4c46de217e7b918365bbdcf33f006fa lib/Log/Dispatch/Email/EmailSend.pm
-SHA1 f148d25945f7b968c8ffe424af3e35c83e9ef88b t/01-basic.t
+SHA1 52c8cb024e340d6d51dd015e609b37edd7fcebff META.yml
+SHA1 cd14ada78fb37a0d926edd86eddcdf7f939de582 Makefile.PL
+SHA1 bd6b1ef672ff171a9eb686570513f10c2c3a3e0c lib/Log/Dispatch/Email/EmailSend.pm
+SHA1 363bd42cd23879c2c34d97913362aa7ad3619367 t/01-basic.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFCWuoZ3Or3ZzQuifMRAmsyAJ0WnxCYmMhWdplsPYN6tG8w4l8kjgCgzJPz
-oz27z52nP966NIPSK8rba+A=
-=sLCT
+iD8DBQFEtP/C3Or3ZzQuifMRAvziAJsHTS5xRmYrXDcMgPBfZ5uaBO/GfQCg3l+a
+j54bdaLEc8fAf6vfDLU2JOQ=
+=5XgM
 -----END PGP SIGNATURE-----

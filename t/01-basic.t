@@ -4,16 +4,18 @@ use strict;
 
 use Test::More;
 
+BEGIN {
+    unless ( eval { require Email::Send::Test; 1 } ) {
+        plan skip_all => 'Email::Send::Test is required to run these tests';
+    }
+}
+
 plan tests => 6;
 
 use_ok('Log::Dispatch::Email::EmailSend');
 
 SKIP:
 {
-    eval { require Email::Send::Test };
-    skip( 'These tests need Email::Send::Test', 5 )
-        if $@;
-
     my $dispatch = Log::Dispatch->new;
 
     $dispatch->add

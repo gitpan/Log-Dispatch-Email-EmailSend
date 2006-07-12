@@ -6,7 +6,7 @@ use Log::Dispatch::Email;
 
 use base qw( Log::Dispatch::Email );
 
-use Email::Send ();
+use Email::Send 2.0;
 use Email::Simple::Creator;
 
 use Params::Validate qw(validate SCALAR ARRAYREF BOOLEAN);
@@ -14,7 +14,7 @@ Params::Validate::validation_options( allow_extra => 1 );
 
 use vars qw[ $VERSION ];
 
-$VERSION = 0.01;
+$VERSION = 0.02;
 
 1;
 
@@ -35,6 +35,7 @@ sub new
     $self->{to} = join ', ', @{ $self->{to} } if ref $self->{to};
 
     $self->{mailer} = $p{mailer};
+    $self->{mailer_args} = $p{mailer_args};
 
     return $self;
 }
@@ -52,7 +53,11 @@ sub send_email
                                        body => $p{message},
                                      );
 
-    Email::Send::send( $self->{mailer}, $email, @{ $self->{mailer_args} } );
+    my $sender = Email::Send->new( { mailer => $self->{mailer},
+                                     @{ $self->{mailer_args} },
+                                   },
+                                 );
+    $sender->send($email);
 }
 
 
