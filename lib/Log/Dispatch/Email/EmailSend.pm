@@ -14,7 +14,7 @@ Params::Validate::validation_options( allow_extra => 1 );
 
 use vars qw[ $VERSION ];
 
-$VERSION = 0.02;
+$VERSION = 0.03;
 
 1;
 
@@ -57,6 +57,8 @@ sub send_email
                                      @{ $self->{mailer_args} },
                                    },
                                  );
+
+    local $?;
     $sender->send($email);
 }
 
